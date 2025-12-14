@@ -194,7 +194,7 @@ const savePledges = (arr) => localStorage.setItem(PLEDGE_KEY, JSON.stringify(arr
 const renderPledges = () => {
   if(!pledgeWall) return;
   const pledges = loadPledges();
-  pledgeWall.innerHTML = pledges.length ? "" : `<div class="muted">No pledges yet — be the first!</div>`;
+  pledgeWall.innerHTML = pledges.length ? "" : `<div class="muted">No pledges yet!</div>`;
   pledges.slice().reverse().forEach(p => {
     const div = document.createElement("div");
     div.className = "pledge";
@@ -278,9 +278,17 @@ window.addEventListener("load", handleStickyNav);
 const enterBtn = document.getElementById("enterSiteBtn");
 if (enterBtn) {
   enterBtn.addEventListener("click", () => {
-    if(mainContent){
-        const y = mainContent.offsetTop - 80;
-        smoothScrollTo(y, 1400);
+    const target = document.getElementById("main-content") || document.querySelector(".hero");
+    
+    if (!target) {
+        console.error("Target section not found!"); 
+        return;
     }
+
+    const y = target.offsetTop - 80;
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
   });
 }
