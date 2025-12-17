@@ -20,7 +20,7 @@ body{
   color:var(--text);
   overflow-x:hidden;
 
-  background: none;
+  background: var(--bg1);  /* Update: this makes the background blue (no more white bordures) */
   position: relative;
 }
 
@@ -422,7 +422,26 @@ footer{
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+/* Update: Team portraits: premium hover zoom */
+.team-photo{
+  transition: transform .25s ease, box-shadow .25s ease;
+  transform: scale(1);
+}
+
+#team .card:hover .team-photo{
+  transform: scale(1.07);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.45);
+}
+
 #team .card strong {
   font-size: 1.1rem;
   margin-bottom: 4px;
+}
+
+#team .card:hover .team-photo{
+  border-color: rgba(255,255,255,0.25);
+}
+
+#team .card:active .team-photo{           /* Team portraits: this is for zoom support on touchscreens */
+  transform: scale(1.07);
 }

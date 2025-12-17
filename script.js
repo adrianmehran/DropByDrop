@@ -272,6 +272,11 @@ function handleStickyNav() {
   }
 }
 
+// ====== UPDATE: IMPACT COUNTERS (0 → final value animation) ======
+// Animates key impact numbers when the Impact section scrolls into view
+// Improves clarity and engagement without affecting data accuracy
+// Uses IntersectionObserver to trigger once when section enters viewport
+
 window.addEventListener("scroll", handleStickyNav);
 window.addEventListener("load", handleStickyNav);
 
@@ -292,3 +297,50 @@ if (enterBtn) {
     });
   });
 }
+
+function animateCount(el, to, duration = 700, suffix = "") {
+  const start = 0;
+  const startTime = performance.now();
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+  function step(now) {
+    const t = Math.min(1, (now - startTime) / duration);
+    const val = Math.round(start + (to - start) * easeOut(t));
+    el.textContent = val + suffix;
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function setupImpactCounters() {
+  const section = document.getElementById("impact");
+  if (!section) return;
+
+  const elResponses = document.getElementById("statResponses");
+  const elReached = document.getElementById("statReached");
+  const elDonations = document.getElementById("statDonations");
+
+  let played = false;
+
+  const io = new IntersectionObserver((entries) => {
+    if (played) return;
+    if (entries[0].isIntersecting) {
+      played = true;
+
+      // 45 (this number will change over time as we get more responses)
+      animateCount(elResponses, 45, 650);
+
+      // 200
+      animateCount(elReached, 200, 700);
+
+      // 351€
+      animateCount(elDonations, 351, 800, "€");
+
+      io.disconnect();
+    }
+  }, { threshold: 0.35 });
+
+  io.observe(section);
+}
+
+window.addEventListener("load", setupImpactCounters);
