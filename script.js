@@ -327,11 +327,11 @@ function setupImpactCounters() {
     if (entries[0].isIntersecting) {
       played = true;
 
-      // 45 (this number will change over time as we get more responses)
-      animateCount(elResponses, 45, 650);
+      // Update: responses statistics number updated (64)
+      animateCount(elResponses, 64, 650);
 
-      // 200
-      animateCount(elReached, 200, 700);
+      // Update: reached statistics number updated (650)
+      animateCount(elReached, 650, 700);
 
       // 351€
       animateCount(elDonations, 351, 800, "€");
