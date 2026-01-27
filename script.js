@@ -327,8 +327,8 @@ function setupImpactCounters() {
     if (entries[0].isIntersecting) {
       played = true;
 
-      // Update: responses statistics number updated (92)
-      animateCount(elResponses, 92, 650);
+      // Update: responses statistics number updated (96)
+      animateCount(elResponses, 96, 650);
 
       // Update: reached statistics number updated (650)
       animateCount(elReached, 650, 700);
