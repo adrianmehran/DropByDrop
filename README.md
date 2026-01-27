@@ -46,7 +46,7 @@ The website supports a wider school campaign that included:
 
 ## 📊 Impact & Outcomes
 
-- **92** survey responses collected  
+- **96** survey responses collected  
 - **650+** people reached through the campaign  
 - **351€** raised and donated to **#TeamWater**, helping provide clean water access to people in need  
 
