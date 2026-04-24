@@ -75,6 +75,8 @@ No external frameworks were used — the site was built from scratch by Adrian M
 
 ## © Copyright
 
-© 2025 — DropByDrop Team  
-Created for educational purposes as part of the Cambridge IGCSE Global Perspectives curriculum.  
-This website and its content may not be copied, reproduced, or distributed without permission.
+© 2025 DropByDrop Team.
+
+This project was created for educational purposes as part of the Cambridge IGCSE Global Perspectives curriculum.
+
+This website may be shared freely via its public link. However, its content may not be copied, reproduced, or modified without prior permission.
