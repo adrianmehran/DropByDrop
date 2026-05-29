@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="theme-color" content="#071a33">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>#DropByDrop - School Water Conservation Campaign</title>
+      
+  <!-- Update: Added favicon (browser, mobile, and PWA support) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="shortcut icon" href="./favicon/favicon.ico">
+  <link rel="manifest" href="./favicon/site.webmanifest">
+  
+  <link rel="stylesheet" href="style.css?v=20260529h" />
+</head>
+
+<body>
+  <section class="us-hero" id="top">
+    <div data-us-project="yY3FUkDkB1mFLgOrBEH0" class="us-scene"></div>
+    <button class="us-enter" id="enterSiteBtn">Enter site ↓</button>
+  </section>
+  
+  <script>
+  !function(){
+    if(!window.UnicornStudio){
+      window.UnicornStudio={isInitialized:false};
+      var s=document.createElement("script");
+      s.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.2/dist/unicornStudio.umd.js";
+      s.onload=function(){
+        if(!window.UnicornStudio.isInitialized){
+          UnicornStudio.init();
+          window.UnicornStudio.isInitialized=true;
+        }
+      };
+      (document.head||document.body).appendChild(s);
+    } else if(!window.UnicornStudio.isInitialized){
+      UnicornStudio.init();
+      window.UnicornStudio.isInitialized=true;
+    }
+  }();
+  </script>
+
+  <div class="nav" id="navbar">
+    <div class="wrap nav-inner">
+        <a href="#mainStart" class="brand" aria-label="Go to hero">
+            <img class="logo" src="images/logo.png" alt="DropByDrop logo">
+            <div>#DropByDrop</div>
+          </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#why">Why it matters</a>
+        <a href="#action">Our action</a>
+        <a href="#tips">Tips</a>
+        <a href="#challenge">7-Day Challenge</a>
+        <a href="#impact">Impact</a>
+        <a href="#team">Team</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="btn primary compact" href="https://docs.google.com/forms/d/e/1FAIpQLSeSzNoEabj9xiWyiiBPO7JtZOCQKI-l8xrHOQ-q1bFFE77wDg/viewform?usp=sharing&ouid=103231803179167534745" target="_blank" rel="noreferrer">Take the Survey</a>
+    </div>
+  </div>
+
+  <header class="hero" id="mainStart">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <p class="campaign-label">School water conservation campaign in Nice</p>
+        <h1>
+          Save Our <span class="hero-accent">Water.</span><br>
+          Shape Our Future.<br>
+          One Drop at a Time.
+        </h1>
+        <p class="sub">
+          #DropByDrop is a water conservation campaign empowering students, families, and teachers to reduce waste through research, surveys, and daily action.
+        </p>
+        <div class="cta-row" id="survey">
+          <a class="btn primary" id="surveyBtn" href="#" target="_blank" rel="noreferrer">
+            <span class="icon water-icon" aria-hidden="true"></span>
+            Take the Water Survey
+          </a>
+          <a class="btn secondary" href="#challenge">Start the 7-Day Challenge</a>
+          <button class="text-action" id="copyLinkBtn">Copy survey link</button>
+        </div>
+        <div class="audience-row" aria-label="Campaign audience">
+          <span>Students</span>
+          <span>Families</span>
+          <span>Teachers</span>
+          <span>Local action, global impact</span>
+        </div>
+      </div>
+
+      <div class="campaign-board" aria-label="Campaign snapshot">
+        <div class="board-header">
+          <span>Campaign snapshot</span>
+          <strong>Nice, France</strong>
+        </div>
+        <div class="metric-list">
+          <div class="metric-row">
+            <span class="metric-label">Survey responses</span>
+            <strong class="stat-count" data-count="96">96</strong>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">People reached</span>
+            <strong><span class="stat-count" data-count="650" data-suffix="+">650+</span></strong>
+          </div>
+          <div class="metric-row">
+            <span class="metric-label">Donations raised</span>
+            <strong class="stat-count" data-count="351" data-suffix="€">351€</strong>
+          </div>
+        </div>
+        <div class="local-context" id="factCard">
+          <p class="mini-title">Local focus</p>
+          <p class="mini-text" id="factText">
+            Nice faces drought pressure and high summer demand. Let’s save water at school and home.
+          </p>
+          <div class="toggle">
+            <label class="switch" for="scopeSwitch">
+              <input class="switch-input" type="checkbox" id="scopeSwitch" role="switch" aria-label="Toggle local focus and global context">
+              <span class="switch-track" aria-hidden="true">
+                <span class="switch-thumb"></span>
+              </span>
+            </label>
+            <span class="muted" id="scopeLabel">Show global context</span>
+          </div>
+        </div>
+        <div class="quick-win">
+          <p class="mini-title">Tip of the day</p>
+          <p class="mini-text"><span id="tipOfDay">Turn off the tap while brushing.</span></p>
+          <button class="text-action" id="newTipBtn">New tip</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section wrap section-intro" id="why">
+      <h2>Why it matters in Nice</h2>
+      <p>
+        Water scarcity is made worse by drought, climate change, and rising demand. In Nice, tourism and hot summers can increase pressure on local water use.
+        Our project focuses on what habits students and families can realistically change to save water #DropByDrop.
+      </p>
+
+      <div class="evidence-list">
+        <div class="evidence-row">
+          <strong>Local issue</strong>
+          <div class="muted">High demand + drought risk → waste matters more than people think.</div>
+        </div>
+        <div class="evidence-row">
+          <strong>School habits</strong>
+          <div class="muted">Leaks, long taps, and daily routines add up fast when multiplied by hundreds of students.</div>
+        </div>
+        <div class="evidence-row">
+          <strong>Home habits</strong>
+          <div class="muted">Shorter showers and smarter water use can reduce waste without “big sacrifices”.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="action">
+      <h2>Our action</h2>
+      <p>
+        Here's what our team did during the campaign.
+      </p>
+      <div class="timeline">
+        <div class="step">
+          <div class="badge">1</div>
+          <div>
+            <strong>Research & planning</strong>
+            <div class="muted">Local water context in Nice + global perspectives + survey planning.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="badge">2</div>
+          <div>
+            <strong>Awareness materials</strong>
+            <div class="muted">Awareness-raising Stand, Informative and awareness posters, website creation, and simple water-saving tips.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="badge">3</div>
+          <div>
+            <strong>Survey + engagement</strong>
+            <div class="muted">Collected responses from the school community to measure awareness and habits.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="badge">4</div>
+          <div>
+            <strong>Challenge + reflection</strong>
+            <div class="muted">Encouraged a 7-day challenge, compared survey responses from before and after action, and took feedback.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="tips">     <!--Updated this section with amount of water saved for each action-->
+      <h2>Easy ways to save water</h2>
+      <p>Small actions. Big impact when everyone does them.</p>
+      <div class="grid3">
+        <div class="card"><strong>Turn off the tap</strong><div class="muted">While brushing teeth or soaping hands. It can save 12L of water/day!</div></div>
+        <div class="card"><strong>Report leaks</strong><div class="muted">A dripping tap can waste a surprising amount over time (15L/day).</div></div>
+        <div class="card"><strong>Shorter showers</strong><div class="muted">Try reducing by 1–2 minutes this week. This would save 20L/shower!</div></div>
+        <div class="card"><strong>Refill bottles</strong><div class="muted">Refill instead of buying new ones. Saves 3L by avoiding manufacturing.</div></div>
+        <div class="card"><strong>Full loads</strong><div class="muted">Dishwasher (save 10L) / washing machine (save 25L): fewer cycles = less water.</div></div>
+        <div class="card"><strong>Be mindful</strong><div class="muted">Close taps fully. Don’t “leave it running”. Running taps waste 6L/hour.</div></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="challenge">
+      <h2>7-Day Water Challenge</h2>
+      <p>Tick each day you complete your water-saving goal. Your progress is saved on this device.</p>
+
+      <div class="card">
+        <div class="stat">
+          <div>
+            <strong>Progress</strong>
+            <div class="muted"><span id="progressText">0</span>/7 days completed</div>
+          </div>
+          <div class="num" id="progressPercent">0%</div>
+        </div>
+        <div class="progress-wrap" style="margin-top:12px;">
+          <div class="progress" id="progressBar"></div>
+        </div>
+
+        <div class="checklist" id="checklist"></div>
+
+        <div class="form-row" style="margin-top:12px;">
+          <button class="btn secondary" id="resetChallengeBtn">Reset</button>
+          <button class="btn primary" id="shareProgressBtn">Copy progress text</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="impact">
+      <h2>Impact & measurement</h2>
+      <p>
+        These are the indicators our project is tracking.
+      </p>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="stat">
+            <div>
+              <strong>Survey responses</strong>
+              <div class="muted">Number of people who completed the water awareness survey</div>
+            </div>
+            <div class="num" id="statResponses">96</div>  <!--(this number will change over time as we get more responses)--> <!-- Update: Number of survey responses updated to 96 -->
+          </div>
+        </div>
+        <div class="card">
+          <div class="stat">
+            <div>
+              <strong>People reached</strong>
+              <div class="muted">Estimated students, parents, and teachers reached</div> <!-- Update: Number of people reached update based on students in Grades 6–12, their parents, and teachers who received the campaign email. -->
+            </div>
+            <div class="num"><span id="statReached">650</span>+</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="stat">
+            <div>
+              <strong>Donations raised</strong>
+              <div class="muted">All donations raised went to #TeamWater — 
+                <a href="images/TeamWater_Donation_Proof.png" target="_blank" rel="noopener"> <!-- Update: Added link to donation proof -->
+                  Donation Proof
+                </a>
+              </div>
+            </div>
+            <div class="num" id="statDonations">351€</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="max-width: 600px; margin: 30px auto 0 auto;">
+        <div class="card">
+          <strong>Pledge wall</strong>
+          <p class="muted" style="margin-top:6px;">Write a short pledge and add it below.</p>
+          <div class="form-row">
+            <input id="pledgeInput" type="text" maxlength="70" placeholder="I will take shorter showers this week!" />
+            <button class="btn primary" id="addPledgeBtn">Add pledge</button>
+            <button class="btn secondary" id="clearPledgesBtn">Clear</button>
+          </div>
+          <div class="wall" id="pledgeWall"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="team">
+      <h2>Meet the team</h2>
+      <p>The students behind the #DropByDrop campaign.</p>
+
+      <div class="grid3">
+        <div class="card">
+          <img class="team-photo" src="./images/adrian_portrait.png" alt="Adrian">
+          <strong>Adrian Mehran</strong>
+          <div class="muted">Local research lead, website design and maintenance, survey design and data analysis (graphs & tables), stand co-ordination.</div> <!-- role updated -->
+        </div>
+
+        <div class="card">
+          <img class="team-photo julia-photo" src="./images/julia_portrait.png" alt="Julia">
+          <strong>Julia Saikali</strong>
+          <div class="muted">Global perspectives research, preparation of slime for charity sale, and stand preperation.</div> <!-- role updated -->
+        </div>
+
+        <div class="card">
+          <img class="team-photo" src="./images/isabella_portrait.png" alt="Isabella">
+          <strong>Isabella Vezneyan</strong>
+          <div class="muted">Global perspectives research, design of informative posters, price-setting for charity sale.</div> <!-- role updated -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="muted">
+        <strong style="color:var(--text)">#DropByDrop</strong> • Cambridge Global Perspectives Team Project action website
+      </div>
+      <span><br><br>© <strong>Adrian Mehran</strong> — All rights reserved</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script src="script.js?v=20260529g"></script>
+</body>
+</html>
